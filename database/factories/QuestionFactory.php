@@ -18,7 +18,10 @@ class QuestionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'category_id' => fake()->numberBetween(1, 4),
+            'user_id' => fake()->numberBetween(1, 20),
+            'title' => fake()->sentence(8),
+            'description' => fake()->paragraphs(2, true),
         ];
     }
 }
